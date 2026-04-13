@@ -32,7 +32,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-003| O sistema deve permitir adicionar, editar e excluir livros |  |  |
 |RF-004| O sistema deve permitir visualizar detalhes de um livro |  |  |
 |RF-005| O sistema deve permitir marcar livros como favoritos |  |  |
-|RF-006| O sistema deve permitir avaliar livros com nota |  | cadastro-noticia.html |
+|RF-006| O sistema deve permitir avaliar livros com nota |  |  |
 |RF-007| O sistema deve permitir registrar opiniões (comentários/resenhas) |  |  |
 |RF-008| O sistema deve exibir lista de livros do usuário |  |  |
 |RF-009| O sistema deve permitir classificar livros por status |  |  |
