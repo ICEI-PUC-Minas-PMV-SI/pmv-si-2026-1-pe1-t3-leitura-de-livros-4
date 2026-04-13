@@ -1,26 +1,31 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
-
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
-
 ## Personas
 
 Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<table>
+<tbody>
+<tr>
+<th colspan="2">Perfil 1: Leitor </th>
+</tr>
+<tr>
+<td width="150px"><b>Descrição</b></td>
+<td width="600px">
+Usuário que deseja registrar os livros que leu, avaliar e organizar seu histórico de leitura.
+</td>
+</tr>
+<tr>
+<td><b>Necessidades</b></td>
+<td>
+1. Cadastrar livros lidos, em leitura e desejados;<br>
+2. Registrar opiniões e avaliações;<br>
+3. Consultar histórico de leitura;<br>
+4. Interface simples e intuitiva.
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Histórias de Usuários
 
@@ -28,17 +33,13 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| Leitor | Cadastrar uma conta                           | Acessar minhas informações de leitura               |
+| Leitor | Fazer login no sistema                        | Acessar meus dados salvos                           |
+| Leitor | Adicionar um livro                            | Registrar que li, estou lendo ou quero ler          |
+| Leitor | Avaliar um livro                              | Expressar minha opinião quantitativa                |
+| Leitor | Escrever uma opinião sobre um livro           | Registrar minha experiência de leitura              |
+| Leitor | Visualizar minha lista de livros              | Acompanhar meu histórico de leitura                 |
+| Leitor | Classificar livros (lido, lendo, quero ler)   | Organizar melhor minhas leituras                    |
 
 ## Requisitos
 
@@ -48,31 +49,29 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
-
+|RF-001| O sistema deve permitir cadastro de usuários                     | ALTA |  
+|RF-002| O sistema deve permitir autenticação (login)                     | ALTA | 
+|RF-003| O sistema deve permitir adicionar, editar e excluir livros       | ALTA |  
+|RF-004| O sistema deve permitir visualizar detalhes de um livro          | ALTA | 
+|RF-005| O sistema deve permitir marcar livros como favoritos             | MÉDIA |  
+|RF-006| O sistema deve permitir avaliar livros com nota                  | MÉDIA | 
+|RF-007| O sistema deve permitir registrar opiniões(comentários/resenhas) | MÉDIA |  
+|RF-008| O sistema deve exibir lista de livros do usuário                 | ALTA | 
+|RF-009| O sistema deve permitir classificar livros por status            | MÉDIA |  
+|RF-010| O sistema deve permitir busca de livros                          | MÉDIA | 
+|RF-011| O sistema deve permitir filtrar livros por categoria/gênero      | MÉDIA |  
+|RF-012| O sistema deve permitir editar perfil do usuário                 | ALTA | 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O sistema deve possuir interface intuitiva e de fácil utilização    | ALTA | 
+|RNF-002| O sistema deve ser responsivo (adaptável a diferentes dispositivos) | ALTA | 
+|RNF-003| O sistema deve garantir segurança dos dados dos usuários            | ALTA | 
+|RNF-004| O sistema deve permitir escalabilidade para múltiplos usuários      | BAIXA | 
+|RNF-005| O sistema deve possuir mensagens de erro claras para o usuário      | ALTA | 
+|RNF-006| O sistema deve validar os dados inseridos (ex: campos obrigatórios) | ALTA | 
 
 ## Restrições
 
@@ -82,10 +81,3 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
-
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
