@@ -6,20 +6,18 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto consiste no desenvolvimento de uma aplicação web voltada para a catalogação e gerenciamento de livros, permitindo que os usuários organizem suas leituras de forma prática, intuitiva e centralizada. A plataforma possibilitará o cadastro de livros lidos, em andamento ou desejados, além do registro de avaliações, notas e opiniões pessoais sobre cada obra, oferecendo ao usuário um ambiente estruturado para acompanhar seu histórico de leitura e armazenar suas percepções literárias ao longo do tempo.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-
+* Diego Miranda Mangerotti
+* Gabriel Freitas Cambraia
+* Isabela Gomes Lima
+* Luis Gustavo da Silva Ramos
 
 ## Orientador
 
-* Nome completo do professor 1
+* Clóvis Lemos Tavares
 
 # Planejamento
 
