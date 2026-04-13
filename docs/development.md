@@ -27,16 +27,26 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|RF-001| O sistema deve permitir cadastro de usuários |  |  |
+|RF-002| O sistema deve permitir autenticação (login) |  |  |
+|RF-003| O sistema deve permitir adicionar, editar e excluir livros |  |  |
+|RF-004| O sistema deve permitir visualizar detalhes de um livro |  |  |
+|RF-005| O sistema deve permitir marcar livros como favoritos |  |  |
+|RF-006| O sistema deve permitir avaliar livros com nota |  | cadastro-noticia.html |
+|RF-007| O sistema deve permitir registrar opiniões (comentários/resenhas) |  |  |
+|RF-008| O sistema deve exibir lista de livros do usuário |  |  |
+|RF-009| O sistema deve permitir classificar livros por status |  |  |
+|RF-010| O sistema deve permitir busca de livros |  |  |
+|RF-011| O sistema deve permitir filtrar livros por categoria/gênero |  |  |
+|RF-012| O sistema deve permitir editar perfil do usuário |  |  |
 
 ## Descrição das estruturas:
 
-## Notícia
+## Profiles
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
+| UserId         | Numero (Inteiro)  | Identificador único de cadastro usuário   | 1                                              |
+| Nome           | Texto             | Nome do usuário                           | "Alex"                                         |
+| Email          | Texto             | Email do usuário                          | alex12456@sga.pucminas.br                      |
+| Senha          | Texto             | Senha do usuário                          | alex12456                                      |
 
