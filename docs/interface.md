@@ -1,38 +1,104 @@
-
 # Projeto de Interface
-
-Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
-
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+O fluxograma abaixo mostra o fluxo de interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Protótipo de baixa fidelidade que se segue. Para visualizar o protótipo interativo, acesse o <a href="https://marvelapp.com/prototype/d2db1e3/screen/98670299?sign_up_origin=player" target="_blank">ambiente MarvelApp do projeto</a>.
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
+```mermaid
+graph TD
+    A[Tela Inicial / Login] -->|Entrar| B(Minha Estante)
+    A -->|Aba Criar Conta| C[Tela Cadastro]
+    C -->|Confirmar Cadastro| A
+    
+    B --> D{Ações na Estante}
+    
+    D -->|Clicar em + Adicionar| E[Modal: Novo Livro]
+    E -->|Adicionar livro| B
+    
+    D -->|Clicar no Lápis| F[Modal: Editar Livro]
+    F -->|Salvar alterações| B
+    
+    D -->|Clicar na Lixeira| G[Modal: Excluir Livro]
+    G -->|Ok / Cancelar| B
+    
+    D -->|Clicar em Sair| A
+```
 
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+<figure> 
+    <figcaption>Figura 1 - Fluxo de telas do usuário</figcaption>
+</figure> 
 
+## Protótipo de baixa fidelidade
 
-## Wireframes
+As telas do sistema apresentam uma estrutura comum focada na simplicidade e organização, mantendo um cabeçalho padrão nas telas logadas e modais centralizados para ações específicas. 
+<hr>
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface e é fundamental sempre relacionar cada wireframe com o(s) requisito(s) que ele atende.
+<h3><b>Tela – Login</b></h3>
+<p>A tela inicial e de Login apresenta um layout minimalista, destacando a logo "Minha Estante". Possui abas alternáveis para "Entrar" e "Criar conta". O formulário de login exige E-mail e Senha, seguidos do botão principal de ação "Entrar".</p>
 
-### Exemplo
+![Login](https://github.com/user-attachments/assets/7f7a1819-9491-4262-a9e7-b8fdfc70d0b6)
 
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
+<figure> 
+    <figcaption>Figura 2 - Tela de acesso à conta do usuário (Login)</figcaption>
+</figure>
+<hr>
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+<h3><b>Tela – Cadastro</b></h3>
+<p>Acessada pela aba "Criar conta" na tela inicial, apresenta os campos necessários para o registro de um novo usuário: Nome, E-mail, Senha e Confirmar senha, finalizando com o botão de ação para efetivar o cadastro.</p>
 
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+![Cadastro](https://github.com/user-attachments/assets/8ddbce11-3ae6-4a8a-9eef-500cbd98b749)
+
+<figure> 
+    <figcaption>Figura 3 - Tela de cadastro de novos usuários</figcaption>
+</figure>
+<hr> 
+  
+<h3><b>Tela – Minha Estante (Vazia)</b></h3>
+<p>Após o login, se o usuário não possuir livros cadastrados, ele é direcionado à sua estante vazia. O cabeçalho apresenta a logo e o botão de logout. Abaixo, há uma barra de busca, o botão "+ Adicionar livro" e filtros de status de leitura (Todos, Lendo, Lidos, Quero ler). Uma mensagem central convida o usuário a adicionar seu primeiro livro.</p>
+
+![Estante Vazia](https://github.com/user-attachments/assets/db5a3fde-5277-4ef7-9639-6b6b6a79bd74)
+
+<figure> 
+    <figcaption>Figura 4 - Tela principal com a estante vazia</figcaption>
+</figure>
+<hr>
+
+<h3><b>Tela – Minha Estante (Com Livros)</b></h3>
+<p>Quando o usuário possui livros cadastrados, eles são exibidos em formato de lista (cards horizontais) abaixo dos filtros. Cada card mostra o status de leitura (ex: "Lido"), avaliação em estrelas, Título, Autor, Ano, número de páginas, um breve resumo e os ícones de ação para editar (lápis) e excluir (lixeira).</p>
+
+![Estante com Livros](https://github.com/user-attachments/assets/19f70e51-faa1-4e1d-bef6-99de7537de9e)
+
+<figure> 
+    <figcaption>Figura 5 - Tela principal com a listagem de livros cadastrados</figcaption>
+</figure>
+<hr>
+
+<h3><b>Tela – Modal: Novo Livro</b></h3>
+<p>Ao clicar em "+ Adicionar livro", um modal sobreposto (overlay) é aberto. Ele contém um formulário completo para o cadastro da obra: Título, Autor(a), Editora, Ano, Páginas, Idioma, Status de leitura (dropdown), Avaliação (estrelas clicáveis) e uma área de texto para o Resumo. O botão de ação é "Adicionar livro".</p>
+
+![Novo Livro](https://github.com/user-attachments/assets/5c8dcdd9-b5e6-4825-8782-977667a6c535)
+
+<figure> 
+    <figcaption>Figura 6 - Tela modal para adição de um novo livro</figcaption>
+</figure>
+<hr>
+
+<h3><b>Tela – Modal: Editar Livro</b></h3>
+<p>Acionado pelo ícone de lápis em um livro listado, abre-se um modal idêntico ao de "Novo Livro", porém com os campos previamente preenchidos com os dados da obra selecionada. O botão de ação é alterado para "Salvar alterações".</p>
+
+![Editar Livro](https://github.com/user-attachments/assets/1a50cbb7-b042-41b5-a54f-95e0fe01c61b)
+
+<figure> 
+    <figcaption>Figura 7 - Tela modal para edição das informações do livro</figcaption>
+</figure>
+<hr>
+
+<h3><b>Tela – Modal: Excluir Livro</b></h3>
+<p>Acionado pelo ícone de lixeira, um modal de confirmação menor é exibido, questionando o usuário se ele deseja realmente excluir o livro selecionado (exibindo o título). Possui botões para "Ok" (confirmar) e "Cancelar".</p>
+
+![Excluir Livro](https://github.com/user-attachments/assets/b82d8bcd-708e-43a4-8905-f091fd4ca58c)
+
+<figure> 
+    <figcaption>Figura 8 - Tela modal de confirmação para exclusão de livro</figcaption>
+</figure>
+<hr>
