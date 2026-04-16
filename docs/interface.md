@@ -4,25 +4,53 @@
 
 O fluxograma abaixo mostra o fluxo de interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Protótipo de baixa fidelidade que se segue. Para visualizar o protótipo interativo, acesse o <a href="https://marvelapp.com/prototype/d2db1e3/screen/98670299?sign_up_origin=player" target="_blank">ambiente MarvelApp do projeto</a>.
 
-```mermaid
-graph TD
-    A[Tela Inicial / Login] -->|Entrar| B(Minha Estante)
-    A -->|Aba Criar Conta| C[Tela Cadastro]
-    C -->|Confirmar Cadastro| A
-    
-    B --> D{Ações na Estante}
-    
-    D -->|Clicar em + Adicionar| E[Modal: Novo Livro]
-    E -->|Adicionar livro| B
-    
-    D -->|Clicar no Lápis| F[Modal: Editar Livro]
-    F -->|Salvar alterações| B
-    
-    D -->|Clicar na Lixeira| G[Modal: Excluir Livro]
-    G -->|Ok / Cancelar| B
-    
-    D -->|Clicar em Sair| A
-```
+## User Flow
+
+O fluxo visual abaixo demonstra a interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Protótipo de baixa fidelidade que se segue.
+
+<br>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="33%">
+      <b>Tela Inicial / Login</b><br>
+      <img src="https://github.com/user-attachments/assets/7f7a1819-9491-4262-a9e7-b8fdfc70d0b6" width="250" style="border: 1px solid #ddd; border-radius: 4px;"/><br>
+      ⬇️ <i>Login com sucesso</i>
+    </td>
+    <td align="center" width="33%">
+      ↔️ <i>Aba "Criar conta"</i>
+    </td>
+    <td align="center" width="33%">
+      <b>Tela de Cadastro</b><br>
+      <img src="https://github.com/user-attachments/assets/8ddbce11-3ae6-4a8a-9eef-500cbd98b749" width="250" style="border: 1px solid #ddd; border-radius: 4px;"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <b>Minha Estante (Listagem Principal)</b><br>
+      <img src="https://github.com/user-attachments/assets/19f70e51-faa1-4e1d-bef6-99de7537de9e" width="450" style="border: 1px solid #ddd; border-radius: 4px;"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">↙️ <i>Clicar em "+ Adicionar"</i></td>
+    <td align="center">⬇️ <i>Clicar no Lápis (Editar)</i></td>
+    <td align="center">↘️ <i>Clicar na Lixeira (Excluir)</i></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Modal: Novo Livro</b><br>
+      <img src="https://github.com/user-attachments/assets/5c8dcdd9-b5e6-4825-8782-977667a6c535" width="250" style="border: 1px solid #ddd; border-radius: 4px;"/>
+    </td>
+    <td align="center">
+      <b>Modal: Editar Livro</b><br>
+      <img src="https://github.com/user-attachments/assets/1a50cbb7-b042-41b5-a54f-95e0fe01c61b" width="250" style="border: 1px solid #ddd; border-radius: 4px;"/>
+    </td>
+    <td align="center">
+      <b>Modal: Excluir Livro</b><br>
+      <img src="https://github.com/user-attachments/assets/b82d8bcd-708e-43a4-8905-f091fd4ca58c" width="250" style="border: 1px solid #ddd; border-radius: 4px;"/>
+    </td>
+  </tr>
+</table>
 
 <figure> 
     <figcaption>Figura 1 - Fluxo de telas do usuário</figcaption>
