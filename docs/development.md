@@ -34,7 +34,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ## Profiles
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Nome           | Texto             | Nome do usuário                           | "Admin"                                        |
-| Email          | Texto             | Email do usuário                          | admin@gmail.com                                |
-| Senha          | Texto             | Senha do usuário                          | 123456                                         |
+| Nome           | Texto             | Nome do usuário                           | "Admin" / "User"                               |
+| Email          | Texto             | Email do usuário                          | admin@gmail.com / user@gmail.com               |
+| Senha          | Texto             | Senha do usuário                          | 123456 / 123456                                |
 
