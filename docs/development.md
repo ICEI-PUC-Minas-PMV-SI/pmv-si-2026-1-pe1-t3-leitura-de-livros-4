@@ -1,21 +1,14 @@
 # Programação de Funcionalidades
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+Pré-requisitos: 
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo.
+Tela de Cadastro (RF-001)
+Exemplo da tela de cadastro:
+<img width="1431" height="856" alt="image" src="https://github.com/user-attachments/assets/78f13276-aa1f-4db2-a33f-8a9be9a8c41b" />
 
-O professor Rommel Carneiro apresenta alguns exemplos prontos para serem utilizados como referência:
-- Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp) 
-- Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
-
-
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+Tela de Login (RF-002)
+Exemplo da tela de login:
+<img width="1430" height="856" alt="image" src="https://github.com/user-attachments/assets/b738e46b-5897-4c19-99f4-1d6ea9d10151" />
 
 ## Exemplo
 
@@ -27,26 +20,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| O sistema deve permitir cadastro de usuários |  |  |
-|RF-002| O sistema deve permitir autenticação (login) |  |  |
-|RF-003| O sistema deve permitir adicionar, editar e excluir livros |  |  |
-|RF-004| O sistema deve permitir visualizar detalhes de um livro |  |  |
-|RF-005| O sistema deve permitir marcar livros como favoritos |  |  |
-|RF-006| O sistema deve permitir avaliar livros com nota |  |  |
-|RF-007| O sistema deve permitir registrar opiniões (comentários/resenhas) |  |  |
-|RF-008| O sistema deve exibir lista de livros do usuário |  |  |
-|RF-009| O sistema deve permitir classificar livros por status |  |  |
-|RF-010| O sistema deve permitir busca de livros |  |  |
-|RF-011| O sistema deve permitir filtrar livros por categoria/gênero |  |  |
-|RF-012| O sistema deve permitir editar perfil do usuário |  |  |
+|RF-001| O sistema deve permitir cadastro de usuários                         | Isabela | login.html / login.css / login.js |
+|RF-002| O sistema deve permitir autenticação (login)                         | Isabela | login.html / login.css / login.js |
+|RF-003| O sistema deve permitir adicionar, editar e excluir livros           |  |  |
+|RF-004| O sistema deve permitir visualizar detalhes de um livro              | Isabela | index.html / index.css / index.js |
+|RF-005| O sistema deve permitir avaliar livros com nota                      |  |  |
+|RF-006| O sistema deve permitir registrar opiniões (comentários/resenhas)    |  |  |
+|RF-007| O sistema deve exibir lista de livros do usuário                     | Isabela | index.html / index.css / index.js |
+|RF-008| O sistema deve permitir classificar livros por status                |  |  |
+|RF-009| O sistema deve permitir busca de livros                              | Isabela | index.html / index.css / index.js |
+|RF-010| O sistema deve permitir filtrar livros por status                    | Isabela | index.html / index.css / index.js |
 
 ## Descrição das estruturas:
 
 ## Profiles
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| UserId         | Numero (Inteiro)  | Identificador único de cadastro usuário   | 1                                              |
-| Nome           | Texto             | Nome do usuário                           | "Alex"                                         |
-| Email          | Texto             | Email do usuário                          | alex12456@sga.pucminas.br                      |
-| Senha          | Texto             | Senha do usuário                          | alex12456                                      |
+| Nome           | Texto             | Nome do usuário                           | "Admin"                                        |
+| Email          | Texto             | Email do usuário                          | admin@gmail.com                                |
+| Senha          | Texto             | Senha do usuário                          | 123456                                         |
 
