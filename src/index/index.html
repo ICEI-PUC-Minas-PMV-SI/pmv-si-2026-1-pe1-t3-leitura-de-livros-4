@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1"
+        />
+        <title>Minha Estante</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/index/index.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <!-- HOME -->
+        <div id="app-screen">
+            <header class="topbar">
+                <div class="container topbar-inner">
+                    <div class="brand">
+                        <div class="brand-logo">
+                            <img
+                                src="logo-secundaria.png"
+                                alt="Minha Estante"
+                            />
+                        </div>
+                        <h1>Minha Estante</h1>
+                    </div>
+                    <div class="topbar-actions">
+                        <div class="user-info">
+                            <button
+                                id="btn-logout"
+                                class="btn btn-ghost btn-sm"
+                            >
+                                <img src="logout.png" alt="Sair" class="icon" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="container main">
+                <div class="search-wrap">
+                    <img src="search.png" class="icon-search" />
+                    <input
+                        id="search"
+                        type="search"
+                        placeholder="Buscar por título"
+                    />
+                    <button id="btn-novo" class="btn btn-primary">
+                        + Adicionar livro
+                    </button>
+                </div>
+
+                <div class="stats" id="stats"></div>
+
+                <div id="list" class="grid"></div>
+                <div id="empty" class="empty hidden"></div>
+            </main>
+        </div>
+
+        <script type="module" src="/index/index.js"></script>
+    </body>
+</html>
