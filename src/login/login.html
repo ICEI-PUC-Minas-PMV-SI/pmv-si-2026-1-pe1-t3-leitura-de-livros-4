@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1"
+        />
+        <title>Minha Estante</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/login/login.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <!-- AUTENTICAÇÃO -->
+        <section id="auth-screen" class="auth-screen">
+            <div class="auth-card">
+                <div class="auth-brand">
+                    <div class="brand-logo">
+                        <img src="logo.png" alt="Minha Estante" />
+                    </div>
+                    <h1>Minha Estante</h1>
+                </div>
+
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-auth-tab="login">
+                        Entrar
+                    </button>
+                    <button class="auth-tab" data-auth-tab="signup">
+                        Criar conta
+                    </button>
+                </div>
+
+                <!-- LOGIN -->
+                <form id="login-form" class="auth-form">
+                    <label class="field">
+                        <span>E-mail</span>
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            autocomplete="email"
+                            placeholder="seu@email.com"
+                        />
+                    </label>
+                    <label class="field">
+                        <span>Senha</span>
+                        <input
+                            name="password"
+                            type="password"
+                            required
+                            autocomplete="current-password"
+                            placeholder="••••••••"
+                        />
+                    </label>
+                    <p class="auth-error hidden" id="login-error"></p>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Entrar
+                    </button>
+                </form>
+
+                <!-- CRIAR CONTA -->
+                <form id="signup-form" class="auth-form hidden">
+                    <label class="field">
+                        <span>Nome</span>
+                        <input
+                            name="name"
+                            type="text"
+                            required
+                            autocomplete="name"
+                            placeholder="Seu nome"
+                        />
+                    </label>
+                    <label class="field">
+                        <span>E-mail</span>
+                        <input
+                            name="email"
+                            type="email"
+                            required
+                            autocomplete="email"
+                            placeholder="seu@email.com"
+                        />
+                    </label>
+                    <label class="field">
+                        <span>Senha</span>
+                        <input
+                            name="password"
+                            type="password"
+                            required
+                            minlength="6"
+                            autocomplete="new-password"
+                            placeholder="Mínimo 6 caracteres"
+                        />
+                    </label>
+                    <label class="field">
+                        <span>Confirmar senha</span>
+                        <input
+                            name="confirm"
+                            type="password"
+                            required
+                            minlength="6"
+                            autocomplete="new-password"
+                            placeholder="Repita a senha"
+                        />
+                    </label>
+                    <p class="auth-error hidden" id="signup-error"></p>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Criar conta
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <script type="module" src="/login/login.js"></script>
+    </body>
+</html>
