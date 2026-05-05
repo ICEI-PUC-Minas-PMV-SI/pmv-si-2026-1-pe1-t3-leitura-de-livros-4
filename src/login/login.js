@@ -63,7 +63,7 @@ async function handleLogin(e) {
 
   saveSession(user.email); // SALVA A SESSÃO
 
-  window.location.href = "/index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
+  window.location.href = "./index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
 }
 
 // CRIA A CONTA
@@ -109,7 +109,7 @@ async function handleSignup(e) {
   saveUsers(users); // SALVA OS USUÁRIOS NO LOCALSTORAGE
   saveSession(email); // SALVA A SESSÃO DO USUÁRIO
 
-  window.location.href = "/index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
+  window.location.href = "./index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
 }
 
 /* ---------- DADOS MOCKADOS ---------- */
@@ -209,7 +209,7 @@ async function init() {
         ); // SALVA A SESSÃO DO USUÁRIO MOCKADO USADO PARA TESTE
       }
 
-      window.location.href = "/index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
+      window.location.href = "./index/index.html"; // REDIRECIONA PARA A PÁGINA PRINCIPAL
       return;
     }
   }
