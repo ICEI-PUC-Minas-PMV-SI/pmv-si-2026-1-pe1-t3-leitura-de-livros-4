@@ -54,7 +54,7 @@ function handleLogout() {
   currentUser = null; // REMOVE O USUÁRIO ATUAL
   books = []; // REMOVE OS LIVROS
   saveSession(null); // REMOVE A SESSÃO
-  window.location.href = "/login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
+  window.location.href = "../login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
 }
 
 /* ---------- RENDER ---------- */
@@ -190,12 +190,12 @@ function init() {
       currentUser = { id: user.id, email: user.email, name: user.name }; // ATUALIZA O USUÁRIO ATUAL
     } else {
       // SE O USUÁRIO NÃO EXISTIR
-      window.location.href = "/login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
+      window.location.href = "../login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
       return;
     }
   } else {
     // SE NÃO HOUVER SESSÃO
-    window.location.href = "/login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
+    window.location.href = "../login/login.html"; // REDIRECIONA PARA A PÁGINA DE LOGIN
     return;
   }
 
