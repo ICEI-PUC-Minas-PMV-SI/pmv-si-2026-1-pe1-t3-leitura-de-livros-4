@@ -67,6 +67,88 @@
             </main>
         </div>
 
+        <!-- MODAL: ADICIONAR / EDITAR LIVRO -->
+        <div id="modal-form" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-form-title">
+            <div class="modal-backdrop" id="modal-form-backdrop"></div>
+            <div class="modal-card">
+                <div class="modal-head">
+                    <h2 id="modal-form-title">Novo livro</h2>
+                    <button class="btn btn-ghost btn-sm" id="btn-form-close" aria-label="Fechar">✕</button>
+                </div>
+                <form id="book-form" class="modal-body" novalidate>
+                    <div class="row">
+                        <label class="field">
+                            <span>Título <span aria-hidden="true">*</span></span>
+                            <input name="title" type="text" required placeholder="Ex: Dom Casmurro" />
+                        </label>
+                        <label class="field">
+                            <span>Autor(a) <span aria-hidden="true">*</span></span>
+                            <input name="author" type="text" required placeholder="Ex: Machado de Assis" />
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="field">
+                            <span>Editora</span>
+                            <input name="publisher" type="text" placeholder="Ex: Companhia das Letras" />
+                        </label>
+                        <label class="field">
+                            <span>Idioma</span>
+                            <input name="language" type="text" placeholder="Ex: Português" />
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="field">
+                            <span>Ano</span>
+                            <input name="year" type="number" min="1" max="2100" placeholder="Ex: 1899" />
+                        </label>
+                        <label class="field">
+                            <span>Páginas</span>
+                            <input name="pages" type="number" min="1" placeholder="Ex: 256" />
+                        </label>
+                    </div>
+                    <div class="field">
+                        <span>Status</span>
+                        <div class="status-pick" id="status-pick">
+                            <button type="button" data-status="lendo">Lendo</button>
+                            <button type="button" data-status="lido">Lido</button>
+                            <button type="button" data-status="quero">Quero ler</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <span>Avaliação</span>
+                        <div id="rating-pick" class="stars"></div>
+                    </div>
+                    <label class="field">
+                        <span>Resumo</span>
+                        <textarea name="review" rows="4" placeholder="Suas impressões sobre o livro..."></textarea>
+                    </label>
+                    <p class="auth-error hidden" id="form-error"></p>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-ghost" id="btn-form-cancel">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btn-form-submit">Adicionar livro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- MODAL: CONFIRMAR EXCLUSÃO -->
+        <div id="modal-delete" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-delete-title">
+            <div class="modal-backdrop" id="modal-delete-backdrop"></div>
+            <div class="modal-card modal-sm">
+                <div class="modal-head">
+                    <h2 id="modal-delete-title">Excluir livro</h2>
+                    <button class="btn btn-ghost btn-sm" id="btn-delete-close" aria-label="Fechar">✕</button>
+                </div>
+                <div class="modal-body">
+                    <p id="delete-msg" style="font-size:0.9rem; color:#30395A;">Tem certeza que deseja excluir este livro?</p>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-ghost" id="btn-delete-cancel">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="btn-delete-confirm">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script type="module" src="index.js"></script>
     </body>
 </html>
