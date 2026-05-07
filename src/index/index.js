@@ -16,6 +16,9 @@ let currentUser = {
 let books = []; // LIVROS DO USUÁRIO
 let filter = "todos"; // FILTRO ATUAL
 let query = ""; // BUSCA ATUAL
+let editingId = null; // ID DO LIVRO SENDO EDITADO (null = novo)
+let deleteId = null; // ID DO LIVRO A EXCLUIR
+let formRating = 0; // AVALIAÇÃO SELECIONADA NO FORMULÁRIO
 
 const $ = (sel) => document.querySelector(sel); // SELECIONAR UM ELEMENTO
 const $$ = (sel) => Array.from(document.querySelectorAll(sel)); // SELECIONAR VÁRIOS ELEMENTOS
@@ -154,11 +157,19 @@ function bookCardHTML(b) {
       <div class="card-head">
         <span class="badge">${meta.label}</span>
         <div class="card-stars">${stars}</div>
+        <div class="card-actions">
+          <button class="icon-btn" data-action="edit" data-id="${b.id}" title="Editar">
+            <img src="edit.png" alt="Editar" class="icon" />
+          </button>
+          <button class="icon-btn" data-action="delete" data-id="${b.id}" title="Excluir">
+            <img src="delete.png" alt="Excluir" class="icon" />
+          </button>
+        </div>
       </div>
       <h3 class="card-title">${b.title}</h3>
       <p class="card-author">${b.author}</p>
       <div class="card-meta">${metaParts.map((m) => `<span>${m}</span>`).join("")}</div>
-      <p class="card-review">${b.review}</p>
+      <p class="card-review">${b.review ?? ""}</p>
     </article>
   `; // RENDERIZA O CARD DO LIVRO COM OS DETALHES DO LIVRO
 }
@@ -173,6 +184,140 @@ function renderStarsHTML(value, readonly = false) {
   }
   html += `</div>`;
   return html;
+}
+
+/* ---------- MODAL FORMULÁRIO ---------- */
+// ABRE O MODAL DE ADICIONAR / EDITAR LIVRO
+function openForm(book = null) {
+  editingId = book ? book.id : null;
+  formRating = book ? (book.rating ?? 0) : 0;
+
+  const modal = $("#modal-form");
+  const form = $("#book-form");
+  const title = $("#modal-form-title");
+  const submitBtn = $("#btn-form-submit");
+
+  title.textContent = book ? "Editar livro" : "Novo livro";
+  submitBtn.textContent = book ? "Salvar alterações" : "Adicionar livro";
+
+  form.elements["title"].value = book?.title ?? "";
+  form.elements["author"].value = book?.author ?? "";
+  form.elements["publisher"].value = book?.publisher ?? "";
+  form.elements["language"].value = book?.language ?? "";
+  form.elements["year"].value = book?.year ?? "";
+  form.elements["pages"].value = book?.pages ?? "";
+  form.elements["review"].value = book?.review ?? "";
+
+  // STATUS
+  const statusPick = $("#status-pick");
+  const selectedStatus = book?.status ?? "quero";
+  statusPick.querySelectorAll("button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.status === selectedStatus);
+  });
+
+  // ESTRELAS
+  renderFormRating(formRating);
+
+  $("#form-error").classList.add("hidden");
+  modal.classList.remove("hidden");
+  form.elements["title"].focus();
+}
+
+// FECHA O MODAL DE FORMULÁRIO
+function closeForm() {
+  $("#modal-form").classList.add("hidden");
+  editingId = null;
+}
+
+// RENDERIZA AS ESTRELAS INTERATIVAS NO FORMULÁRIO
+function renderFormRating(value) {
+  const container = $("#rating-pick");
+  container.innerHTML = "";
+  for (let n = 1; n <= 5; n++) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.dataset.star = n;
+    btn.textContent = "★";
+    btn.className = value >= n ? "filled" : "";
+    btn.addEventListener("click", () => {
+      formRating = n;
+      renderFormRating(n);
+    });
+    container.appendChild(btn);
+  }
+}
+
+// SUBMETE O FORMULÁRIO DE ADICIONAR / EDITAR LIVRO
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = $("#book-form");
+  const title = form.elements["title"].value.trim();
+  const author = form.elements["author"].value.trim();
+
+  if (!title || !author) {
+    const err = $("#form-error");
+    err.textContent = "Título e Autor são obrigatórios.";
+    err.classList.remove("hidden");
+    return;
+  }
+
+  const activeStatus = $("#status-pick .active");
+  const status = activeStatus ? activeStatus.dataset.status : "quero";
+
+  const yearVal = parseInt(form.elements["year"].value, 10);
+  const pagesVal = parseInt(form.elements["pages"].value, 10);
+
+  const data = {
+    title,
+    author,
+    publisher: form.elements["publisher"].value.trim(),
+    language: form.elements["language"].value.trim(),
+    year: isNaN(yearVal) ? null : yearVal,
+    pages: isNaN(pagesVal) ? null : pagesVal,
+    status,
+    rating: formRating,
+    review: form.elements["review"].value.trim(),
+  };
+
+  if (editingId) {
+    const idx = books.findIndex((b) => b.id === editingId);
+    if (idx !== -1) {
+      books[idx] = { ...books[idx], ...data };
+    }
+  } else {
+    books.unshift({ id: uid(), createdAt: Date.now(), ...data });
+  }
+
+  saveBooks();
+  closeForm();
+  render();
+}
+
+/* ---------- MODAL EXCLUSÃO ---------- */
+// ABRE O MODAL DE CONFIRMAÇÃO DE EXCLUSÃO
+function openDelete(id) {
+  deleteId = id;
+  const book = books.find((b) => b.id === id);
+  const msg = $("#delete-msg");
+  msg.textContent = book
+    ? `Tem certeza que deseja excluir "${book.title}"?`
+    : "Tem certeza que deseja excluir este livro?";
+  $("#modal-delete").classList.remove("hidden");
+}
+
+// FECHA O MODAL DE EXCLUSÃO
+function closeDelete() {
+  $("#modal-delete").classList.add("hidden");
+  deleteId = null;
+}
+
+// CONFIRMA A EXCLUSÃO DO LIVRO
+function confirmDelete() {
+  if (!deleteId) return;
+  books = books.filter((b) => b.id !== deleteId);
+  saveBooks();
+  closeDelete();
+  render();
 }
 
 /* ---------- INICIALIZAÇÃO ---------- */
@@ -199,12 +344,44 @@ function init() {
     return;
   }
 
-  $("#btn-logout").addEventListener("click", handleLogout); // ADICIONA O EVENTO DE CLICK PARA O BOTÃO DE LOGOUT
-  $("#btn-novo").addEventListener("click", () => openForm()); // ADICIONA O EVENTO DE CLICK PARA O BOTÃO DE ADICIONAR LIVRO
+  $("#btn-logout").addEventListener("click", handleLogout);
+  $("#btn-novo").addEventListener("click", () => openForm());
   $("#search").addEventListener("input", (e) => {
-    // ADICIONA O EVENTO DE INPUT PARA O CAMPO DE BUSCA
     query = e.target.value;
     renderList();
+  });
+
+  // EVENTOS DO MODAL DE FORMULÁRIO
+  $("#btn-form-close").addEventListener("click", closeForm);
+  $("#btn-form-cancel").addEventListener("click", closeForm);
+  $("#modal-form-backdrop").addEventListener("click", closeForm);
+  $("#book-form").addEventListener("submit", handleFormSubmit);
+
+  // EVENTO DOS BOTÕES DE STATUS NO FORMULÁRIO
+  $("#status-pick").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-status]");
+    if (!btn) return;
+    $("#status-pick").querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+
+  // EVENTOS DO MODAL DE EXCLUSÃO
+  $("#btn-delete-close").addEventListener("click", closeDelete);
+  $("#btn-delete-cancel").addEventListener("click", closeDelete);
+  $("#modal-delete-backdrop").addEventListener("click", closeDelete);
+  $("#btn-delete-confirm").addEventListener("click", confirmDelete);
+
+  // DELEGAÇÃO DE EVENTOS PARA EDITAR E EXCLUIR NOS CARDS
+  $("#list").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-action]");
+    if (!btn) return;
+    const { action, id } = btn.dataset;
+    if (action === "edit") {
+      const book = books.find((b) => b.id === id);
+      if (book) openForm(book);
+    } else if (action === "delete") {
+      openDelete(id);
+    }
   });
 
   books = loadBooks(currentUser.id); // CARREGA OS LIVROS DO USUÁRIO

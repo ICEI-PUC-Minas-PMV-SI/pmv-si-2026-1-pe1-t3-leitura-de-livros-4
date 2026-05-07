@@ -559,6 +559,15 @@ p {
   padding-top: 0.5rem;
 }
 
+.btn-danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
 /* LOGOUT */
 #btn-logout {
   display: inline-flex;
