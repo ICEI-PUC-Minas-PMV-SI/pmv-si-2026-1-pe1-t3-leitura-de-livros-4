@@ -22,7 +22,7 @@ Exemplo de visualização de detalhes de um livro e da lista de livros do usuár
 Exemplo de buscar de livros do usuário:
 <img width="1476" height="862" alt="image" src="https://github.com/user-attachments/assets/d3483c95-d8fd-470a-a292-77d305906966" />
 
-### Filtrar livros por status
+### Filtrar livros por status (RF-010)
 
 Exemplo de filtragem de livros por status:
 <img width="1477" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2ca6de-3137-475e-bfff-275026bad85c" />
