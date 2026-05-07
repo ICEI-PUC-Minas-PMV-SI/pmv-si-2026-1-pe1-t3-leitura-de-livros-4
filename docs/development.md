@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/especification.md"> Especificação do Projeto</a></span>, <a href=""> Metodologia</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/interface.md"> Projeto de Interface</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/template.md"> Arquitetura da Solução</a>
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/especification.md"> Especificação do Projeto</a></span>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/interface.md"> Projeto de Interface</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/template.md"> Arquitetura da Solução</a>
 
 Link de acesso: https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html
 
