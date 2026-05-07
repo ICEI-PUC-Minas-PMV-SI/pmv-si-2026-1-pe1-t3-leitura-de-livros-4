@@ -34,6 +34,7 @@ Exemplo de visualização de detalhes de um livro e da lista de livros do usuár
 
 **Requisitos atendidos**
 > **RF-004**: O sistema deve permitir visualizar detalhes de um livro
+> 
 > **RF-007**: O sistema deve exibir lista de livros do usuário
 
 ### BUSCAR LIVROS POR TÍTULO/AUTOR (RF-009)
