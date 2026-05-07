@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/especification.md"> Especificação do Projeto</a></span>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/interface.md"> Projeto de Interface</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/template.md"> Arquitetura da Solução</a>
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/especification.md"> Especificação do Projeto</a></span>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/interface.md"> Projeto de Interface</a>
 
 Link de acesso: https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html
 
@@ -72,12 +72,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-002| O sistema deve permitir autenticação (login)                         | Isabela | login.html / login.css / login.js |
 |RF-003| O sistema deve permitir adicionar, editar e excluir livros           |  |  |
 |RF-004| O sistema deve permitir visualizar detalhes de um livro              | Isabela | index.html / index.css / index.js |
-|RF-005| O sistema deve permitir avaliar livros com nota                      |  |  |
-|RF-006| O sistema deve permitir registrar opiniões (comentários/resenhas)    |  |  |
-|RF-007| O sistema deve exibir lista de livros do usuário                     | Isabela | index.html / index.css / index.js |
-|RF-008| O sistema deve permitir classificar livros por status                |  |  |
-|RF-009| O sistema deve permitir busca de livros                              | Isabela | index.html / index.css / index.js |
-|RF-010| O sistema deve permitir filtrar livros por status                    | Isabela | index.html / index.css / index.js |
+|RF-005| O sistema deve permitir marcar livros como favoritos                 |  |  |
+|RF-006| O sistema deve permitir avaliar livros                               |  |  |
+|RF-007| O sistema deve permitir registrar opiniões (comentários/resenhas)    |  |  |
+|RF-008| O sistema deve exibir lista de livros do usuário                     | Isabela | index.html / index.css / index.js |
+|RF-009| O sistema deve permitir classificar livros por status                |  |  |
+|RF-010| O sistema deve permitir busca de livros                              | Isabela | index.html / index.css / index.js |
+|RF-011| O sistema deve permitir filtrar livros por status                    | Isabela | index.html / index.css / index.js |
 
 ## Descrição das estruturas
 
