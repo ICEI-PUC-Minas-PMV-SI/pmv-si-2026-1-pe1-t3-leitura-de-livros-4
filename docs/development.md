@@ -1,28 +1,48 @@
 # Programação de Funcionalidades
 
-Pré-requisitos: 
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/especification.md"> Especificação do Projeto</a></span>, <a href=""> Metodologia</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/interface.md"> Projeto de Interface</a>, <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/blob/main/docs/template.md"> Arquitetura da Solução</a>
+
+Link de acesso: https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html
 
 ### Tela de Cadastro (RF-001)
+
+Responsável: Isabela
+O cadastro do usuário poderá ser feito através da opção "Criar conta" na tela inicial
 
 Exemplo da tela de cadastro:
 <img width="1431" height="856" alt="image" src="https://github.com/user-attachments/assets/78f13276-aa1f-4db2-a33f-8a9be9a8c41b" />
 
+Requisito atendido
+RF-001: O sistema deve permitir cadastro de usuários
+
 ### Tela de Login (RF-002)
+
+Responsável: Isabela
+O login poderá ser realizado atrás da opção "Entrar" na tela inicial
 
 Exemplo da tela de login:
 <img width="1430" height="856" alt="image" src="https://github.com/user-attachments/assets/b738e46b-5897-4c19-99f4-1d6ea9d10151" />
 
 ### Visualizar detalhes de um livro (RF-004) / Exibir lista de livros do usuário (RF-005)
 
+Responsável: Isabela
+Será possível visualizar a lista de livros e os detalhes na tela principal logo após realizar o login na plataforma.
+
 Exemplo de visualização de detalhes de um livro e da lista de livros do usuário:
 <img width="1474" height="863" alt="image" src="https://github.com/user-attachments/assets/342e730f-d681-4218-9a55-b53340202f2b" />
 
 ### Buscar livros do usuário (RF-009)
 
+Responsável: Isabela
+Será possível buscar os livros pelo título e autor logo após realizar o login na plataforma na opção "Buscar por título"
+
 Exemplo de buscar de livros do usuário:
 <img width="1476" height="862" alt="image" src="https://github.com/user-attachments/assets/d3483c95-d8fd-470a-a292-77d305906966" />
 
 ### Filtrar livros por status (RF-010)
+
+Responsável: Isabela
+Será possível filtrar os livros por status nas opções "Lendo", "Lidos" e "Quero Ler" na tela principal.
 
 Exemplo de filtragem de livros por status:
 <img width="1477" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2ca6de-3137-475e-bfff-275026bad85c" />
