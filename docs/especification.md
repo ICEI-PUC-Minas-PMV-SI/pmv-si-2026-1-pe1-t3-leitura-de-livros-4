@@ -57,8 +57,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-008| O sistema deve exibir lista de livros do usuário                                   | ALTA | 
 |RF-009| O sistema deve permitir classificar livros por status (lidos, lendo, quero ler)    | ALTA |  
 |RF-010| O sistema deve permitir filtrar livros por título                                  | MÉDIA | 
-|RF-011| O sistema deve permitir filtrar livros por categoria/gênero                        | BAIXA |  
-|RF-012| O sistema deve permitir editar perfil do usuário                                   | MÉDIA | 
+|RF-011| O sistema deve permitir editar perfil do usuário                                   | MÉDIA | 
 
 ### Requisitos não Funcionais
 
