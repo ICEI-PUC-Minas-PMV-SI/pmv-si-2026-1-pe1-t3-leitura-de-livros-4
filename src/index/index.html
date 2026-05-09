@@ -130,7 +130,30 @@
                 </form>
             </div>
         </div>
+<!-- MODAL: FAVORITAR/RESUMO -->
+                    <div class="field favorite-field">
+                        <span>Favorito</span>
+                        <button type="button" id="btn-favorite" class="btn-favorite" aria-label="Marcar como favorito" aria-pressed="false">
+                            <svg id="icon-heart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span id="favorite-label">Marcar como favorito</span>
+                        </button>
+                        <input type="hidden" name="favorite" id="favorite-value" value="false" />
+                    </div>
 
+                    <label class="field">
+                        <span>Resumo</span>
+                        <textarea name="review" rows="4" placeholder="Suas impressões sobre o livro..."></textarea>
+                    </label>
+                    <p class="auth-error hidden" id="form-error"></p>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-ghost" id="btn-form-cancel">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="btn-form-submit">Adicionar livro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <!-- MODAL: CONFIRMAR EXCLUSÃO -->
         <div id="modal-delete" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-delete-title">
             <div class="modal-backdrop" id="modal-delete-backdrop"></div>
