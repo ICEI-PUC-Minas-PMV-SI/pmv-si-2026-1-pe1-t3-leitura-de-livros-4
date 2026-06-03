@@ -1,148 +1,230 @@
-# Testes
-
-Neste projeto serão realizados dois tipos de testes:
-
- - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
- - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
-
-Se quiser conhecer um pouco mais sobre os tipos de teste de software, leia o documento [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/).
-
-A documentação dos testes é dividida nas seguintes seções:
-
- - [Plano de Testes de Software](#plano-de-testes-de-software)
- - [Registro dos Testes de Software](#registro-dos-testes-de-software)
- - [Avaliação dos Testes de Software](#avaliação-dos-testes-de-software)
- - [Cenários de Teste de Usabilidade](#cenários-de-teste-de-usabilidade)
- - [Registro dos Testes de Usabilidade](#registro-dos-testes-de-usabilidade)
- - [Avaliação dos Testes de Usabilidade](#avaliação-dos-testes-de-usabilidade)
-
 # Teste de Software
-
-Nesta seção o grupo deverá documentar os testes de software que verificam a correta implementação dos requisitos funcionais e não funcionais do software.
 
 ## Plano de Testes de Software
 
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
-
-
-**Caso de Teste** | **CT01 - Criar conta parte 1**
+**Caso de Teste** | **CT01 - Cadastro de Usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Acesse o endereço www.teste.com.br <br> 2) Clique em criar conta <br> 2) Preencha todos os campos do formulário <br> 3) Clique no botão "Continuar".
+**Procedimento**  | 1) Acesse o endereço [www.leituradelivros.com.br](https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html) <br> 2) Clique em "criar conta" <br> 3) Preencha todos os campos do formulário <br> 3) Clique no botão "Criar conta" ao final do formulário.
 **Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Resultado esperado** | Usuário cadastrado com sucesso e redirecionado para a tela de login.
+**Dados de entrada** | Nome: Maria Silva
+Email: maria@email.com
+Senha: 123456
 **Resultado obtido** | Sucesso
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - Login de Usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Criar conta" <br> 
-**Requisitos associados** | RF-001
-**Resultado esperado** | Usuário cadastrado
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
+**Procedimento**  | 1) Acesse o endereço [www.leituradelivros.com.br](https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html) <br> 2) Clique no botão "Entrar" <br> 3) Preencha todos os campos do formulário <br> 4) Clique no botão "Entrar" ao final do formulário.
+**Requisitos associados** | RF-002
+**Resultado esperado** | Usuário autenticado e acesso à página principal.
+**Dados de entrada** | Email e senha cadastrados anteriormente.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT03 - Adicionar Livro**
+ :--------------: | ------------
+**Procedimento**  | 1) Clicar em "+Adicionar Livro". <br> 2) Preencher os dados do livro. <br> 3) Clique no botão "Adicionar Livro" ao final do formulário.
+**Requisitos associados** | RF-003
+**Resultado esperado** | Livro cadastrado e exibido na lista.
+**Dados de entrada** | Clean Code, Robert C. Martin, 2008, Lendo.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT04 - Editar Livro**
+ :--------------: | ------------
+**Procedimento**  | 1) Selecionar um livro existente. <br> 2) Clicar no ícone de editar (lápis). <br> 3) Alterar informações. 3) Salvar.
+**Requisitos associados** | RF-003
+**Resultado esperado** | Informações atualizadas corretamente.
+**Dados de entrada** | Alteração do status de "Lendo" para "Lido".
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT05 - Excluir Livro**
+ :--------------: | ------------
+**Procedimento**  | 1) Selecionar um livro existente. <br> 2) Clicar no ícone de excluir (lixeira). <br> 3) Confirmar exclusão.
+**Requisitos associados** | RF-003
+**Resultado esperado** | Livro removido da lista.
+**Dados de entrada** | Livro previamente cadastrado.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT06 - Visualizar Detalhes**
+ :--------------: | ------------
+**Procedimento**  | 1) Selecionar um livro da lista.
+**Requisitos associados** | RF-004
+**Resultado esperado** | Exibição completa das informações do livro.
+**Dados de entrada** | Livro previamente cadastrado.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT07 - Avaliar Livro**
+ :--------------: | ------------
+**Procedimento**  | 1) Selecionar um livro. 2) Clicar no ícone de editar (lápis). 3) Informar quantidade de estrelas. 4) Salvar.
+**Requisitos associados** | RF-006
+**Resultado esperado** | Avaliação registrada corretamente.
+**Dados de entrada** | Nota 4 estrelas.
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT08 - Registrar Opinião**
+ :--------------: | ------------
+**Procedimento**  | 1) Selecionar um livro. 2) Clicar no ícone de editar (lápis). 3) Inserir um comentário. 4) Salvar.
+**Requisitos associados** | RF-007
+**Resultado esperado** | Resenha armazenada e exibida no livro.
+**Dados de entrada** | "Excelente leitura para desenvolvedores."
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT09 - Buscar Livro**
+ :--------------: | ------------
+**Procedimento**  | 1. Informar título ou autor na barra de busca.
+**Requisitos associados** | RF-009
+**Resultado esperado** | Exibição apenas dos livros compatíveis com a pesquisa.
+**Dados de entrada** | "Clean Code"
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT10 - Filtrar por Status**
+ :--------------: | ------------
+**Procedimento**  | 1. Selecionar filtro "Lidos", "Lendo" ou "Quero Ler".
+**Requisitos associados** | RF-010
+**Resultado esperado** | Exibição apenas dos livros do status selecionado.
+**Dados de entrada** | Status "Lido".
 **Resultado obtido** | Sucesso
 
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
 
-|*Caso de Teste*                                 |*CT01 - Criar conta parte 1*                                         |
+|*Caso de Teste*                                 |*CT01 - Cadastro de Usuário*                                         |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
+|Requisito Associado | RF-001: O sistema deve permitir cadastro de usuários|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
 
-|*Caso de Teste*                                 |*CT02 - Criar conta parte 2*                                        |
+|*Caso de Teste*                                 |*CT02 - Login de Usuário*                                        |
+|---|---|
+|Requisito Associado | RF-002: O sistema deve permitir autenticação (login)|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT03 - Adicionar Livro*                                        |
+|---|---|
+|Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT04 - Editar Livro*                                        |
+|---|---|
+|Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT05 - Excluir Livro*                                        |
+|---|---|
+|Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT06 - Visualizar Detalhes*                                        |
 |---|---|
 |Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT07 - Avaliar Livro*                                        |
+|---|---|
+|Requisito Associado | RF-004: O sistema deve permitir visualizar detalhes de um livro|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT08 - Registrar Opinião*                                        |
+|---|---|
+|Requisito Associado | RF-006 - O sistema deve permitir registrar opiniões (comentários/resenhas|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT09 - Buscar Livro*                                        |
+|---|---|
+|Requisito Associado | RF-009: O sistema deve permitir busca de livros|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT10 - Filtrar por Status*                                        |
+|---|---|
+|Requisito Associado | RF-010: O sistema deve permitir filtrar livros por status|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
 
 
 ## Avaliação dos Testes de Software
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os testes de software realizados permitiram verificar o correto funcionamento das principais funcionalidades da aplicação. Todos os casos de teste executados apresentaram resultados satisfatórios, demonstrando conformidade com os requisitos funcionais definidos durante a etapa de especificação.
 
-## Testes de unidade automatizados (Opcional)
+Entre os pontos fortes identificados destacam-se a simplicidade da interface, a facilidade de navegação entre as funcionalidades e o correto armazenamento das informações dos usuários e dos livros cadastrados. As funcionalidades de cadastro, autenticação, gerenciamento de livros, avaliações e filtros apresentaram comportamento consistente durante os testes realizados.
 
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
+Como pontos de melhoria, observou-se a necessidade de aprimorar algumas validações de entrada de dados, bem como melhorar as mensagens de feedback apresentadas ao usuário em determinadas situações. Também foram identificadas oportunidades de aprimoramento na organização visual de algumas telas para facilitar ainda mais a experiência de navegação.
+
+De forma geral, os resultados obtidos indicam que a aplicação atende aos requisitos propostos para o projeto, estando apta para utilização pelos usuários previstos no escopo da solução.
 
 # Testes de Usabilidade
-
-O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
-
-Para tanto, elaboramos quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
-
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
-
-Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
-
-Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da tarefa proposta, conforme a seguinte escala:
-
-1. Péssimo; 
-2. Ruim; 
-3. Regular; 
-4. Bom; 
-5. Ótimo.
-
-Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo utilizado quando um especialista (um desenvolvedor) realiza a mesma tarefa.
-
-Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
-
-Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
-
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
-
 
 ## Cenários de Teste de Usabilidade
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
-
-
+| 1             | Você acabou de criar uma conta. Faça login e adicione um livro à sua biblioteca pessoal. |
+| 2             | Localize um livro específico utilizando a funcionalidade de busca por título ou autor. |
+| 3             | Altere o status de um livro para "Lido", registre uma avaliação e escreva uma opinião sobre ele. |
+| 4             | Filtre sua biblioteca para visualizar apenas os livros marcados como "Quero Ler". |
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você acabou de criar uma conta. Faça login e adicione um livro à sua biblioteca pessoal.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
+| 1       | SIM             | 5                    | 35 segundos                     |
+| 2       | SIM             | 5                    | 42 segundos                     |
+| 3       | SIM             | 4                    | 39 segundos                     |
+| 4       | SIM             | 5                    | 37 segundos                     |
 |  |  |  |  |
-| **Média**     | 100%           | 5                | 28.02 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
+| **Média** | 100%          | 4,75                 | 38,25 segundos                  |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 15 segundos |
 
-
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
+    Comentários dos usuários: Interface simples e fácil de entender.
     Não tive dificuldades e acho que ficou bem intuitivo.
 
-
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Localize um livro específico utilizando a funcionalidade de busca por título ou autor.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 4                    | 36.21 segundos                          |
+| 1       | SIM             | 5                    | 12 segundos                          |
+| 2       | SIM             | 4                    | 18 segundos                          |
+| 3       | SIM             | 5                    | 15 segundos                          |
+| 4       | SIM             | 5                    | 14 segundos                          |
 |  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| **Média**     | 100%           | 4,75                | 14,75 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 6 segundos |
 
+    Comentários dos usuários: A busca foi considerada intuitiva.
 
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+Cenário 3: Altere o status de um livro para "Lido", registre uma avaliação e escreva uma opinião sobre ele.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 28 segundos                          |
+| 2       | SIM             | 4                    | 33 segundos                          |
+| 3       | SIM             | 5                    | 29 segundos                          |
+| 4       | SIM             | 5                    | 31 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4,75                | 30,25 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 10 segundos |
+
+    Comentários dos usuários: Alguns usuários demoraram para localizar o campo de avaliação.
+
+Cenário 4: Filtre sua biblioteca para visualizar apenas os livros marcados como "Quero Ler".
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 10 segundos                          |
+| 2       | SIM             | 5                    | 12 segundos                          |
+| 3       | SIM             | 4                    | 15 segundos                          |
+| 4       | SIM             | 5                    | 11 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4,75                | 12 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 5 segundos |
+
+    Comentários dos usuários: Funcionalidade facilmente encontrada pelos usuários.
 
 ## Avaliação dos Testes de Usabilidade
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
+Os testes de usabilidade demonstraram que os participantes conseguiram concluir todos os cenários propostos com sucesso, resultando em uma taxa de sucesso de 100% em todas as atividades avaliadas.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+A satisfação dos usuários apresentou média superior a 4,5 em todos os cenários, indicando uma percepção positiva em relação à facilidade de uso da aplicação. Os participantes destacaram a organização da interface, a simplicidade das funcionalidades e a facilidade para cadastrar e consultar livros.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
+Observou-se uma diferença entre o tempo de execução dos usuários e o tempo obtido pelo especialista, o que era esperado devido ao conhecimento prévio do sistema por parte da equipe de desenvolvimento. Apesar disso, os tempos registrados indicam que os usuários conseguiram compreender rapidamente o funcionamento da aplicação.
 
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
-
-
-
+Como oportunidades de melhoria, foram identificados ajustes relacionados à visibilidade de algumas funcionalidades, especialmente os campos de avaliação e edição dos livros. Essas melhorias poderão ser consideradas em futuras evoluções do sistema para tornar a navegação ainda mais intuitiva.
