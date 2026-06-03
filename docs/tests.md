@@ -7,9 +7,7 @@
 **Procedimento**  | 1) Acesse o endereço [www.leituradelivros.com.br](https://icei-puc-minas-pmv-si.github.io/pmv-si-2026-1-pe1-t3-leitura-de-livros-4/src/login/login.html) <br> 2) Clique em "criar conta" <br> 3) Preencha todos os campos do formulário <br> 3) Clique no botão "Criar conta" ao final do formulário.
 **Requisitos associados** | RF-001
 **Resultado esperado** | Usuário cadastrado com sucesso e redirecionado para a tela de login.
-**Dados de entrada** | Nome: Maria Silva
-Email: maria@email.com
-Senha: 123456
+**Dados de entrada** | Nome: Maria Silva <br> Email: maria@email.com <br> Senha: 123456
 **Resultado obtido** | Sucesso
 
 **Caso de Teste** | **CT02 - Login de Usuário**
