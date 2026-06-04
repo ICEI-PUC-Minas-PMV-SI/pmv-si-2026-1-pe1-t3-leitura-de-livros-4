@@ -89,53 +89,52 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |*Caso de Teste*                                 |*CT01 - Cadastro de Usuário*                                         |
 |---|---|
 |Requisito Associado | RF-001: O sistema deve permitir cadastro de usuários|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
+|Link do vídeo do teste realizado: | [CT01 - Cadastro de Usuário](https://drive.google.com/file/d/1KVVVZ3KN1XLbM1oCZW1TKNPYSiQHr82F/view?usp=sharing)| 
 
 |*Caso de Teste*                                 |*CT02 - Login de Usuário*                                        |
 |---|---|
 |Requisito Associado | RF-002: O sistema deve permitir autenticação (login)|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT02 - Login de Usuário](https://drive.google.com/file/d/1sikhJJxbnJB3kJPyrMQ5r2isclYnQDPp/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT03 - Adicionar Livro*                                        |
 |---|---|
 |Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT03 - Adicionar Livro](https://drive.google.com/file/d/1xi5sOo61YKCyI1Qc2MxEX9c-hAt_fZvt/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT04 - Editar Livro*                                        |
 |---|---|
 |Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT04 - Editar Livro](https://drive.google.com/file/d/15oF4RRZgWPo8pYzSqL4rig45WYS2CAiL/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT05 - Excluir Livro*                                        |
 |---|---|
 |Requisito Associado | RF-003: O sistema deve permitir adicionar, editar e excluir livros|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT05 - Excluir Livro](https://drive.google.com/file/d/1v7WqABYyH-OfDpp72UvcbJ9pWM4EwgtU/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT06 - Visualizar Detalhes*                                        |
 |---|---|
 |Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT06 - Visualizar Detalhes](https://drive.google.com/file/d/1kto9-lgz0apuVEFSgwHjVFr3Wg2MNMvi/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT07 - Avaliar Livro*                                        |
 |---|---|
 |Requisito Associado | RF-004: O sistema deve permitir visualizar detalhes de um livro|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT07 - Avaliar Livro](https://drive.google.com/file/d/1GoS0pjhbGBK5mCH_35BO5unoS5_xgKqT/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT08 - Registrar Opinião*                                        |
 |---|---|
 |Requisito Associado | RF-006 - O sistema deve permitir registrar opiniões (comentários/resenhas|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT08 - Registrar Opinião](https://drive.google.com/file/d/1A4XRYuSgGXAAd5MaPPnROQNFZU2N3SKn/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT09 - Buscar Livro*                                        |
 |---|---|
 |Requisito Associado | RF-009: O sistema deve permitir busca de livros|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | [CT09 - Buscar Livro](https://drive.google.com/file/d/1SmGmWadb4f4kn-u0CcKsTy_yalxgoBw6/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT10 - Filtrar por Status*                                        |
 |---|---|
 |Requisito Associado | RF-010: O sistema deve permitir filtrar livros por status|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
-
+|Link do vídeo do teste realizado: | [CT10 - Filtrar por Status](https://drive.google.com/file/d/1jAuNNG51kN4RI1dJ5sjrJ0dK1CkNJo0v/view?usp=sharing) | 
 
 ## Avaliação dos Testes de Software
 
