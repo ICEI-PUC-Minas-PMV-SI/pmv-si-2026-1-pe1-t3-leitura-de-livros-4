@@ -69,7 +69,7 @@
 **Caso de Teste** | **CT09 - Buscar Livro**
  :--------------: | ------------
 **Procedimento**  | 1. Informar título ou autor na barra de busca.
-**Requisitos associados** | RF-009
+**Requisitos associados** | RF-010
 **Resultado esperado** | Exibição apenas dos livros compatíveis com a pesquisa.
 **Dados de entrada** | "Clean Code"
 **Resultado obtido** | Sucesso
@@ -77,7 +77,7 @@
 **Caso de Teste** | **CT10 - Filtrar por Status**
  :--------------: | ------------
 **Procedimento**  | 1. Selecionar filtro "Lidos", "Lendo" ou "Quero Ler".
-**Requisitos associados** | RF-010
+**Requisitos associados** | RF-011
 **Resultado esperado** | Exibição apenas dos livros do status selecionado.
 **Dados de entrada** | Status "Lido".
 **Resultado obtido** | Sucesso
@@ -113,27 +113,27 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 
 |*Caso de Teste*                                 |*CT06 - Visualizar Detalhes*                                        |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
+|Requisito Associado | RF-004 - O sistema deve permitir visualizar detalhes de um livro|
 |Link do vídeo do teste realizado: | [CT06 - Visualizar Detalhes](https://drive.google.com/file/d/1kto9-lgz0apuVEFSgwHjVFr3Wg2MNMvi/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT07 - Avaliar Livro*                                        |
 |---|---|
-|Requisito Associado | RF-004: O sistema deve permitir visualizar detalhes de um livro|
+|Requisito Associado | RF-006: O sistema deve permitir avaliar livros |
 |Link do vídeo do teste realizado: | [CT07 - Avaliar Livro](https://drive.google.com/file/d/1GoS0pjhbGBK5mCH_35BO5unoS5_xgKqT/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT08 - Registrar Opinião*                                        |
 |---|---|
-|Requisito Associado | RF-006 - O sistema deve permitir registrar opiniões (comentários/resenhas|
+|Requisito Associado | RF-007 - O sistema deve permitir registrar opiniões (comentários/resenhas|
 |Link do vídeo do teste realizado: | [CT08 - Registrar Opinião](https://drive.google.com/file/d/1A4XRYuSgGXAAd5MaPPnROQNFZU2N3SKn/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT09 - Buscar Livro*                                        |
 |---|---|
-|Requisito Associado | RF-009: O sistema deve permitir busca de livros|
+|Requisito Associado | RF-010: O sistema deve permitir filtrar livros por título|
 |Link do vídeo do teste realizado: | [CT09 - Buscar Livro](https://drive.google.com/file/d/1SmGmWadb4f4kn-u0CcKsTy_yalxgoBw6/view?usp=sharing) | 
 
 |*Caso de Teste*                                 |*CT10 - Filtrar por Status*                                        |
 |---|---|
-|Requisito Associado | RF-010: O sistema deve permitir filtrar livros por status|
+|Requisito Associado | RF-011: 	O sistema deve permitir filtrar livros por status|
 |Link do vídeo do teste realizado: | [CT10 - Filtrar por Status](https://drive.google.com/file/d/1jAuNNG51kN4RI1dJ5sjrJ0dK1CkNJo0v/view?usp=sharing) | 
 
 ## Avaliação dos Testes de Software
