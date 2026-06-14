@@ -45,12 +45,18 @@ Exemplo de exclusão de um livro:
 <img width="1164" height="659" alt="image" src="https://github.com/user-attachments/assets/02ba1ee8-9d96-4792-a77f-6d4fbf70251c" />
 <img width="1168" height="661" alt="image" src="https://github.com/user-attachments/assets/2fadb2dc-8764-4bf6-b4fb-83042bc04672" />
 
+Exemplo de classifação por status:
+
+<img width="1445" height="482" alt="image" src="https://github.com/user-attachments/assets/d9f30709-ecfb-4306-a563-2962615f8772" />
+
 **Requisitos atendidos**
 > **RF-003**: O sistema deve permitir adicionar, editar e excluir livros
 > 
 > **RF-005**: O sistema deve permitir avaliar livros
 > 
 > **RF-006**: O sistema deve permitir registrar opiniões
+>
+> **RF-008**: O sistema deve permitir classificar livros por status
 
 ### VISUALIZAR DETALHES DO LIVRO (RF-004) / EXIBIR LISTA DE LIVROS (RF-007)
 
