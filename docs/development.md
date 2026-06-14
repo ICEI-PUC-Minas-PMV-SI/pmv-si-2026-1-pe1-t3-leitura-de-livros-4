@@ -97,11 +97,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |------|------------------------|------------|-----------------|
 |RF-001| O sistema deve permitir cadastro de usuários                         | Isabela | login.html / login.css / login.js |
 |RF-002| O sistema deve permitir autenticação (login)                         | Isabela | login.html / login.css / login.js |
-
+|RF-003| O sistema deve permitir adicionar, editar e excluir livros           | Gabriel | index.html / index.css / index.js |
 |RF-004| O sistema deve permitir visualizar detalhes de um livro              | Isabela | index.html / index.css / index.js |
-
+|RF-005| O sistema deve permitir avaliar livros                               | Gabriel | index.html / index.css / index.js |
+|RF-006| O sistema deve permitir registrar opiniões (comentários/resenhas)    | Gabriel | index.html / index.css / index.js |
 |RF-007| O sistema deve exibir lista de livros do usuário                     | Isabela | index.html / index.css / index.js |
-
+|RF-008| O sistema deve permitir classificar livros por status                | Gabriel | index.html / index.css / index.js |
 |RF-009| O sistema deve permitir busca de livros                              | Isabela | index.html / index.css / index.js |
 |RF-010| O sistema deve permitir filtrar livros por status                    | Isabela | index.html / index.css / index.js |
 
